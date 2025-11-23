@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Quantaa Reunion 2025 — Registration</title>
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <h1 class="hero-title">
+          <span class="word quantaa">Quantaa</span>
+          <span class="word reunion">Reunion</span>
+          <span class="word year">2025</span>
+          <div class="title-underline" aria-hidden="true"></div>
+        </h1>
+        <p class="hero-sub">
+          Join us for an unforgettable gathering of the Quantaa family. Register
+          now to secure your spot!
+        </p>
+      </header>
+
+      <section class="form-wrap" aria-labelledby="reg-heading">
+        <div class="form-card" role="region" aria-labelledby="reg-heading">
+          <div class="form-card-header">
+            <h2 id="reg-heading">Registration Form</h2>
+            <p class="muted">
+              Please fill in following information to complete your
+              registration.
+            </p>
+          </div>
+
+          <form id="registrationForm" class="registration-form" novalidate>
+            <!-- Personal Information -->
+            <section class="form-section">
+              <div class="section-title with-icon">
+                <div class="icon-circle" aria-hidden="true">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z"
+                      stroke="#fff"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M3 21v-1c0-2.761 4.477-5 9-5s9 2.239 9 5v1"
+                      stroke="#fff"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="section-label">Personal Info</div>
+              </div>
+
+              <div class="row two-col">
+                <label class="field">
+                  <span class="field-label">Quantaa ID *</span>
+                  <input
+                    class="field-input"
+                    type="text"
+                    id="quantaaID"
+                    name="quantaaID"
+                    placeholder="Enter your Quantaa ID"
+                    required
+                  />
+                </label>
+
+                <label class="field">
+                  <span class="field-label">Batch Number *</span>
+                  <input
+                    class="field-input"
+                    type="text"
+                    id="batchNo"
+                    name="batchNo"
+                    placeholder="Enter you batch number"
+                  />
+                </label>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Full Name *</span>
+                <input
+                  class="field-input"
+                  type="text"
+                  id="quantaaName"
+                  name="quantaaName"
+                  placeholder="Enter your full name"
+                />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Phone Number *</span>
+                <input
+                  class="field-input"
+                  type="tel"
+                  id="quantaaPhone"
+                  name="quantaaPhone"
+                  placeholder="+880 16********"
+                />
+              </label>
+
+              <label class="field">
+                <span class="field-label">Full Address *</span>
+                <textarea
+                  class="field-input"
+                  id="fullAddress"
+                  name="fullAddress"
+                  rows="2"
+                  placeholder="Enter your complete address"
+                ></textarea>
+              </label>
+            </section>
+
+            <!-- Guest & Event Information -->
+            <section class="form-section">
+              <div class="section-title with-icon">
+                <div class="icon-circle" aria-hidden="true">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 11c1.657 0 3-1.79 3-4s-1.343-4-3-4-3 1.79-3 4 1.343 4 3 4z"
+                      stroke="#fff"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M8 11c1.657 0 3-1.79 3-4S9.657 3 8 3 5 4.79 5 7s1.343 4 3 4z"
+                      stroke="#fff"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2 21v-1c0-2.5 3-4.5 6-4.5"
+                      stroke="#fff"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M22 21v-1c0-2.5-3-4.5-6-4.5"
+                      stroke="#fff"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="section-label">Guest & Event Info</div>
+              </div>
+
+              <div class="field radio-field">
+                <div class="field-label">Will you bring any guests?</div>
+                <div class="checkbox-row">
+                  <label class="checkbox-label" for="bringGuest">
+                    <input
+                      class="field-input"
+                      type="checkbox"
+                      id="bringGuest"
+                      name="bringGuest"
+                    />
+                    <span>Yes, I will bring guests</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Placeholder for dynamic guest child fields -->
+              <div id="guest-children-placeholder" aria-live="polite"></div>
+
+              <label class="field">
+                <span class="field-label">T-Shirt Size *</span>
+
+                <div
+                  class="custom-select"
+                  data-name="tshirt_size"
+                  id="tshirt-size-select"
+                  tabindex="0"
+                  role="combobox"
+                  aria-haspopup="listbox"
+                  aria-expanded="false"
+                >
+                  <button
+                    type="button"
+                    class="custom-select__trigger"
+                    aria-hidden="true"
+                  >
+                    <span class="custom-select__value"
+                      >Select your t-shirt size</span
+                    >
+                    <span class="custom-select__chev" aria-hidden="true">
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        focusable="false"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M7 10l5 5 5-5"
+                          stroke="#6b7280"
+                          stroke-width="1.6"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </button>
+
+                  <div
+                    class="custom-select__options"
+                    role="listbox"
+                    tabindex="-1"
+                    aria-hidden="true"
+                  >
+                    <div
+                      class="custom-select__option"
+                      role="option"
+                      data-value="XS"
+                    >
+                      Extra Small
+                    </div>
+                    <div
+                      class="custom-select__option"
+                      role="option"
+                      data-value="S"
+                    >
+                      Small
+                    </div>
+                    <div
+                      class="custom-select__option"
+                      role="option"
+                      data-value="M"
+                    >
+                      Medium
+                    </div>
+                    <div
+                      class="custom-select__option"
+                      role="option"
+                      data-value="L"
+                    >
+                      Large
+                    </div>
+                    <div
+                      class="custom-select__option"
+                      role="option"
+                      data-value="XL"
+                    >
+                      Extra Large
+                    </div>
+                    <div
+                      class="custom-select__option"
+                      role="option"
+                      data-value="XXL"
+                    >
+                      Double Extra Large
+                    </div>
+                  </div>
+
+                  <input
+                    type="hidden"
+                    name="tshirtSize"
+                    id="tshirtSize"
+                    value=""
+                  />
+                </div>
+              </label>
+            </section>
+
+            <!-- Payment Details -->
+            <section class="form-section">
+              <div class="section-title with-icon">
+                <div class="icon-circle" aria-hidden="true">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect
+                      x="2"
+                      y="6"
+                      width="20"
+                      height="12"
+                      rx="2"
+                      stroke="#fff"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M2 10h20"
+                      stroke="#fff"
+                      stroke-width="1.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </div>
+                <div class="section-label">Payment Info</div>
+              </div>
+
+              <div class="row two-col">
+                <label class="field">
+                  <span class="field-label">Fee Amount *</span>
+                  <input
+                    class="field-input"
+                    type="number"
+                    id="feeAmount"
+                    name="feeAmount"
+                    placeholder="Enter amount"
+                  />
+                </label>
+
+                <!-- Custom dropdown for Payment Method -->
+                <label class="field">
+                  <span class="field-label">Payment Method *</span>
+
+                  <!-- custom select component -->
+                  <div
+                    class="custom-select"
+                    data-name="payment_method"
+                    id="payment-method-select"
+                    tabindex="0"
+                    role="combobox"
+                    aria-haspopup="listbox"
+                    aria-expanded="false"
+                  >
+                    <button
+                      type="button"
+                      class="custom-select__trigger"
+                      aria-hidden="true"
+                    >
+                      <span class="custom-select__value"
+                        >Select payment method</span
+                      >
+                      <span class="custom-select__chev" aria-hidden="true">
+                        <!-- chevron -->
+                        <svg
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          focusable="false"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M7 10l5 5 5-5"
+                            stroke="#6b7280"
+                            stroke-width="1.6"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          />
+                        </svg>
+                      </span>
+                    </button>
+
+                    <div
+                      class="custom-select__options"
+                      role="listbox"
+                      tabindex="-1"
+                      aria-hidden="true"
+                    >
+                      <div
+                        class="custom-select__option"
+                        role="option"
+                        data-value="bKash"
+                      >
+                        bKash
+                      </div>
+                      <div
+                        class="custom-select__option"
+                        role="option"
+                        data-value="Nagad"
+                      >
+                        Nagad
+                      </div>
+                      <div
+                        class="custom-select__option"
+                        role="option"
+                        data-value="Rocket"
+                      >
+                        Rocket
+                      </div>
+                      <div
+                        class="custom-select__option"
+                        role="option"
+                        data-value="Cash"
+                      >
+                        Cash
+                      </div>
+                    </div>
+
+                    <!-- hidden input to hold the selected value for form submission -->
+                    <input
+                      type="hidden"
+                      name="paymentMethod"
+                      id="paymentMethod"
+                      value=""
+                    />
+                  </div>
+                </label>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Transaction ID (if applicable)</span>
+                <input
+                  class="field-input"
+                  type="text"
+                  id="transactionID"
+                  name="transactionID"
+                  placeholder="Enter transaction / reference ID"
+                />
+              </label>
+            </section>
+
+            <!-- Optional Information -->
+            <section class="form-section">
+              <div class="section-title with-icon">
+                <div class="icon-circle" aria-hidden="true">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <circle
+                      cx="12"
+                      cy="12"
+                      r="9"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                    />
+                    <line
+                      x1="12"
+                      y1="8"
+                      x2="12"
+                      y2="8"
+                      stroke="#fff"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                    <line
+                      x1="12"
+                      y1="11"
+                      x2="12"
+                      y2="16"
+                      stroke="#fff"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </div>
+                <div class="section-label">Optional Info</div>
+              </div>
+
+              <label class="field">
+                <span class="field-label">Suggestions or Special Requests</span>
+                <textarea
+                  class="field-input"
+                  id="suggestion"
+                  name="suggestion"
+                  rows="4"
+                  placeholder="Any suggestions or special requests for the event?"
+                ></textarea>
+                <small class="muted"
+                  >Share any ideas or requirements you may have
+                  (optional)</small
+                >
+              </label>
+            </section>
+
+            <div class="form-actions">
+              <button type="submit" class="btn-primary submit-btn">
+                Register Now
+              </button>
+            </div>
+          </form>
+
+          <!-- Footer -->
+          <footer class="footer text-center mt-4">
+            Made with <span class="heart">❤️</span> by
+            <strong>Md. Parvez</strong>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
