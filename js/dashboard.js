@@ -97,9 +97,9 @@ function renderTable(data) {
       <td>${r.num_guests || 0}</td>
       <td>${r.payment_method}</td>
       <td>${r.transaction_id}</td>
-      <td>
-        <button class="actions-btn edit-btn" data-id="${r.id}">Edit</button>
-        <button class="actions-btn delete-btn" data-id="${r.id}">Delete</button>
+      <td>       
+        <button class="actions-btn edit-btn btn" data-id="${r.id}">Edit</button>
+        <button class="actions-btn change-status-btn btn" data-id="${r.id}">Change Status</button>
       </td>
     `;
     registrationsTable.appendChild(tr);
@@ -157,8 +157,26 @@ function openEditModal(id) {
   document.getElementById('transactionID').value = record.transaction_id || '';
   document.getElementById('suggestion').value = record.suggestion || '';
 
+  // Store ID for saving
   registrationForm.dataset.editId = record.id;
+
+  // Also store ID for deleting from modal
+  document.getElementById("modalDeleteBtn").dataset.deleteId = record.id;
 }
+
+document.getElementById("modalDeleteBtn").addEventListener("click", function () {
+  const id = this.dataset.deleteId;
+
+  if (!id) return;
+
+  if (confirm("Are you sure you want to delete this record?")) {
+    deleteRecord(id);
+    editModal.classList.remove('active');
+  }
+});
+
+
+
 
 // ---------------------------
 // Close modal
@@ -237,7 +255,7 @@ registrationForm.addEventListener('submit', async (e) => {
 // ---------------------------
 async function deleteRecord(id) {
   const recordId = parseInt(id, 10);
-  if (!confirm(`Are you sure you want to delete record #${recordId}?`)) return;
+ // if (!confirm(`Are you sure you want to delete record #${recordId}?`)) return;
 
   try {
     const { data, error } = await supabase
@@ -304,8 +322,6 @@ document.getElementById('downloadBtn').addEventListener('click', () => {
 
   showToast('✔ CSV downloaded successfully!', 'success');
 });
-
-
 
 
 

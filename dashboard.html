@@ -44,7 +44,6 @@
     <table id="registrationsTable">
       <thead>
         <tr>
-          <th>Serial No</th>
           <th>Quantaa ID</th>
           <th>Name</th>
           <th>Phone</th>
@@ -64,7 +63,7 @@
   <div id="editModal" class="modal">
     <div class="modal-content">
       <span class="closeBtn">&times;</span>
-      <h3>Edit Registration</h3>
+      <label class="edit_modal_header">Edit Registration</label>
 
       <form id="registrationForm" class="registration-form" novalidate>
         <!-- Personal Information -->
@@ -102,7 +101,13 @@
 
         <div class="form-actions">
           <button type="submit" class="btn-primary submit-btn">Save Changes</button>
+
+          <!-- Delete button inside modal -->
+          <button type="button" id="modalDeleteBtn" class="btn-danger">
+            Delete Record
+          </button>
         </div>
+
       </form>
     </div>
   </div>

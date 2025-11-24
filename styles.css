@@ -323,11 +323,11 @@ body {
   gap: 18px;
 }
 
-.field-input.error,
-textarea.error {
+.form-section .field .field-input.error {
   border: 2px solid red;
   background-color: #ffe6e6;
 }
+
 
 /* inputs & selects */
 .field-input[type="text"],
@@ -427,7 +427,7 @@ select {
 
 /* guest children container styling (yellow left border) */
 .guest-children {
-  margin-top: 100px;
+  margin-top: 20px;
   margin-bottom: 20px;
   padding-left: 20px;
   border-left: 1px solid var(--left-accent);
